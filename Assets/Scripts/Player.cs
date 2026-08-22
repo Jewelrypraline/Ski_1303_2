@@ -8,6 +8,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     [SerializeField]
     private float forcePower;
 
+    [SerializeField]
     private Rigidbody rb;
 
     private InputAction moveAction;
