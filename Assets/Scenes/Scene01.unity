@@ -1925,9 +1925,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1902565370}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46d6cc69a426ed74b9e521cfc65adb65, type: 3}
+  m_Script: {fileID: 11500000, guid: 6abdc183db31a3b40a3e3d1dbb1cfc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  forcePower: 5
+  point: 0
+  hp: 100
 --- !u!4 &1945008971 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7006974950890623671, guid: fca5175bb8811e9418e053a186d8faeb, type: 3}
