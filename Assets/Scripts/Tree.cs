@@ -8,7 +8,7 @@ public class Tree : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rd = Getcommponet<MeshRenderer>();
+        rd = GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
@@ -19,6 +19,18 @@ public class Tree : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        rd.material.color = Color.red;
         
+        Player player = collision.gameObject.GetComponent<Player>();
+
+        if (player == null)
+            return;
+
+        player.HP -= 15;
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        rd.material.color = new Color32 (134, 74, 23, 255);
     }
 }
