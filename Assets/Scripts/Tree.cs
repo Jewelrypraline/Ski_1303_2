@@ -20,7 +20,7 @@ public class Tree : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         rd.material.color = Color.red;
-        
+
         Player player = collision.gameObject.GetComponent<Player>();
 
         if (player == null)
@@ -29,18 +29,24 @@ public class Tree : MonoBehaviour
         player.HP -= 15;
         UIManager.instance.ShowNotiText($"Hurt -15\nHP: {player.HP}");
 
-        if (player.HP < 0)
+        if (player.HP <= 0)
         {
             player.HP = 0;
-            UIManager.instance.ShowNotiText($"DEAD \nPoints: {player.Point}");
-            Time.timeScale = 0f;
-            UIManager.instance.ShowHideRestartButton(true);
+
+            GameOver gameOver = player.GetComponent<GameOver>();
+
+            if (gameOver != null)
+            {
+                gameOver.GameOverChange();
+            }
         }
-            
     }
+
+        
 
     private void OnCollisionExit(Collision collision)
     {
         rd.material.color = new Color32 (134, 74, 23, 255);
     }
+    
 }

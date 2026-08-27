@@ -36,7 +36,7 @@ public class UIManager : MonoBehaviour
         notiText.text = s;
     }
 
-    public void RestartGame()
+    /*public void RestartGame()
     {
         player.transform.position = new Vector3(0f, 88f, -86.25f);
         player.HP = 100;
@@ -48,5 +48,5 @@ public class UIManager : MonoBehaviour
     public void ShowHideRestartButton(bool flag)
     {
         restartButton.SetActive(flag);
-    }
+    }*/
 }
