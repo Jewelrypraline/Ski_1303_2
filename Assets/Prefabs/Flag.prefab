@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8990279188117703687}
   - component: {fileID: 4899784633705342809}
   - component: {fileID: 969851334745339347}
+  - component: {fileID: 240645538678541180}
   m_Layer: 0
   m_Name: Flag
   m_TagString: Untagged
@@ -126,6 +127,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af3ac5ad6ffc40d4badaa4555740e907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Flag
+--- !u!114 &240645538678541180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7723293557181835353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef779c67331cd3242afab9a4c3257f45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CoinSound
+  coinSound: {fileID: 8300000, guid: d070dc724a65938448f8fbe73ed799ee, type: 3}
 --- !u!1001 &5424635013714382368
 PrefabInstance:
   m_ObjectHideFlags: 0
