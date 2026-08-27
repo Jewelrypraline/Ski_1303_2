@@ -3,21 +3,25 @@ using UnityEngine.SceneManagement;
 
 public class Finish : MonoBehaviour
 {
+    private bool hasFinished = false;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
+        if (hasFinished)
+            return;
+
         Player p = other.GetComponent<Player>();
+
         if (p == null)
             return;
 
-        // 1. หยุดเวลาไม่ให้ตัวละครร่วงลงไป
-        Time.timeScale = 0f;
+        hasFinished = true;
 
-        // 2. บันทึกแต้มไว้ดึงไปแสดงหน้าถัดไป
+        // บันทึกคะแนน
         PlayerPrefs.SetInt("FinalScore", p.Point);
         PlayerPrefs.Save();
 
-        // 3. เปลี่ยนไปหน้า Scene ชนะ (อย่าลืมเปลี่ยนชื่อให้ตรงไฟล์นะคะ)
+        // ไปหน้า Win
         SceneManager.LoadScene("WinScene");
     }
 }
