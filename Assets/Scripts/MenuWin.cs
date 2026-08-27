@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuWin : MonoBehaviour
 {
-    // ต้องเพิ่มบรรทัดนี้ ไม่งั้นโค้ดจะ Error เพราะไม่รู้จัก scoreText
+    
     public TextMeshProUGUI scoreText;
 
     private void Start()

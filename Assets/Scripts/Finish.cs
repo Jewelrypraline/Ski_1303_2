@@ -5,7 +5,7 @@ public class Finish : MonoBehaviour
 {
     private bool hasFinished = false;
 
-    // เปลี่ยนกลับมาเป็น 3D: OnTriggerEnter และ Collider
+    
     private void OnTriggerEnter(Collider other)
     {
         if (hasFinished)
@@ -18,11 +18,11 @@ public class Finish : MonoBehaviour
 
         hasFinished = true;
 
-        // บันทึกคะแนน
+        
         PlayerPrefs.SetInt("FinalScore", p.Point);
         PlayerPrefs.Save();
 
-        // ไปหน้า Win
+        
         SceneManager.LoadScene("WinScene");
     }
 }
