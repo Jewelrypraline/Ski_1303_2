@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Tree : MonoBehaviour
 
@@ -29,14 +30,12 @@ public class Tree : MonoBehaviour
         player.HP -= 15;
         UIManager.instance.ShowNotiText($"Hurt -15\nHP: {player.HP}");
 
-        if (player.HP < 0)
+        
+        if (player.HP <= 0)
         {
             player.HP = 0;
-            UIManager.instance.ShowNotiText($"DEAD \nPoints: {player.Point}");
-            Time.timeScale = 0f;
-            UIManager.instance.ShowHideRestartButton(true);
+            SceneManager.LoadScene("GameOverScene");
         }
-            
     }
 
     private void OnCollisionExit(Collision collision)
